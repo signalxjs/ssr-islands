@@ -24,6 +24,7 @@
         "version:major": "node scripts/bump-version.js major"
     },
     "devDependencies": {
+        "@types/node": "^22.19.1",
         "@typescript/native-preview": "7.0.0-dev.20260510.1",
         "happy-dom": "^20.9.0",
         "oxlint": "^1.47.0",
