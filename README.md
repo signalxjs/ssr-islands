@@ -78,7 +78,7 @@ Everything outside of an island stays as static HTML — no JavaScript shipped, 
 - [`signalxjs/ssg`](https://github.com/signalxjs/ssg) — `@sigx/ssg`, `@sigx/ssg-theme-daisyui`
 - [`signalxjs/cli`](https://github.com/signalxjs/cli) — `@sigx/cli`
 - [`signalxjs/lynx`](https://github.com/signalxjs/lynx) — Lynx native runtime + modules
-- [`signalxjs/docs`](https://github.com/signalxjs/docs) — Docs site
+- [Docs site](https://signalxjs.github.io/) — main SignalX documentation
 
 ## Contributing
 
