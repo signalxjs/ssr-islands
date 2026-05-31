@@ -51,7 +51,7 @@
         "url": "https://github.com/signalxjs/ssr-islands/issues"
     },
     "dependencies": {
-        "@sigx/server-renderer": "^0.4.8"
+        "@sigx/server-renderer": "^0.4.9"
     },
     "peerDependencies": {
         "sigx": "^0.4.1"
