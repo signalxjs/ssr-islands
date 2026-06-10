@@ -13,72 +13,32 @@
 
 > 🚧 SignalX is in early public release (`0.4.x`). The API surface is small and stabilising — feedback is very welcome.
 
-Renders pages on the server and selectively hydrates only the components that need interactivity, controlled by `client:*` directives.
+Renders pages on the server and selectively hydrates only the components that need interactivity, controlled by `client:*` directives. Everything outside of an island stays as static HTML — no JavaScript shipped, no hydration cost — so you ship interactivity only where it's actually needed.
 
-## Install
+## 📚 Documentation
 
-```bash
-npm install @sigx/ssr-islands sigx vite
-```
+Full guides, API reference and live examples → **<https://sigx.dev/ssg/>**
 
-## Quick start
+## A taste
 
-Add the Vite plugin to your app:
-
-```ts
-// vite.config.ts
-import { defineConfig } from 'vite';
-import sigx from '@sigx/vite';
-import islands from '@sigx/ssr-islands';
-
-export default defineConfig({
-  plugins: [sigx(), islands()],
-});
-```
-
-Use a `client:*` directive on any component to mark it as an island:
+Mark any component as an island with a `client:*` directive:
 
 ```tsx
-import { Counter } from './Counter';
-
-export const Page = () => (
-  <article>
-    <h1>Mostly static content</h1>
-    <p>This entire page is rendered on the server.</p>
-
-    {/* Hydrated when the page loads */}
-    <Counter client:load />
-
-    {/* Hydrated when the browser is idle */}
-    <Counter client:idle />
-
-    {/* Hydrated when the component scrolls into view */}
-    <Counter client:visible />
-  </article>
-);
+<Counter client:load />     {/* hydrate immediately */}
+<Counter client:idle />     {/* hydrate when the browser is idle */}
+<Counter client:visible />  {/* hydrate when it scrolls into view */}
 ```
 
-Everything outside of an island stays as static HTML — no JavaScript shipped, no hydration cost.
+See the [docs](https://sigx.dev/ssg/) for install, the Vite plugin setup, and the full list of hydration strategies.
 
-## Hydration strategies
+## Part of SignalX
 
-| Directive | When it hydrates |
-| --- | --- |
-| `client:load` | Immediately when the page boots |
-| `client:idle` | When `requestIdleCallback` fires |
-| `client:visible` | When the island intersects the viewport |
-| `client:media={query}` | When a media query matches |
-| `client:only` | Render is skipped on the server; hydrates on the client like an SPA component |
-
-## Companion repos
-
-- [`signalxjs/core`](https://github.com/signalxjs/core) — `reactivity`, `runtime-core`, `runtime-dom`, `server-renderer`, `vite`, `sigx`
-- [`signalxjs/router`](https://github.com/signalxjs/router) — `@sigx/router`
-- [`signalxjs/store`](https://github.com/signalxjs/store) — `@sigx/store`
-- [`signalxjs/ssg`](https://github.com/signalxjs/ssg) — `@sigx/ssg`, `@sigx/ssg-theme-daisyui`
-- [`signalxjs/cli`](https://github.com/signalxjs/cli) — `@sigx/cli`
-- [`signalxjs/lynx`](https://github.com/signalxjs/lynx) — Lynx native runtime + modules
-- [Docs site](https://signalxjs.github.io/) — main SignalX documentation
+- [`core`](https://sigx.dev/core/) — `reactivity`, `runtime-core`, `runtime-dom`, `server-renderer`, `vite`, `sigx`
+- [`router`](https://sigx.dev/router/) — `@sigx/router`
+- [`store`](https://sigx.dev/store/) — `@sigx/store`
+- [`ssg`](https://sigx.dev/ssg/) — `@sigx/ssg`, `@sigx/ssg-theme-daisyui`
+- [`cli`](https://sigx.dev/cli/) — `@sigx/cli`
+- [`lynx`](https://sigx.dev/lynx/) — Lynx native runtime + modules
 
 ## Contributing
 
