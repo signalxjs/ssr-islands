@@ -2,7 +2,7 @@
 
 # @sigx/ssr-islands
 
-**Islands architecture for [SignalX](https://github.com/signalxjs/core) SSR.**
+**Islands architecture for [SignalX](https://sigx.dev/core/) SSR.**
 
 [![npm](https://img.shields.io/npm/v/@sigx/ssr-islands.svg?label=@sigx/ssr-islands&color=blue)](https://www.npmjs.com/package/@sigx/ssr-islands)
 [![license](https://img.shields.io/npm/l/@sigx/ssr-islands.svg)](./LICENSE)
