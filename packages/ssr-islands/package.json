@@ -46,7 +46,7 @@
         "url": "git+https://github.com/signalxjs/ssr-islands.git",
         "directory": "packages/ssr-islands"
     },
-    "homepage": "https://github.com/signalxjs/ssr-islands",
+    "homepage": "https://sigx.dev/ssg/",
     "bugs": {
         "url": "https://github.com/signalxjs/ssr-islands/issues"
     },
