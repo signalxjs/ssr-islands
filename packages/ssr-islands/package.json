@@ -54,14 +54,14 @@
         "@sigx/server-renderer": "^0.4.9"
     },
     "peerDependencies": {
-        "sigx": "^0.4.9"
+        "sigx": "^0.6.3"
     },
     "devDependencies": {
-        "@sigx/vite": "^0.4.9",
+        "@sigx/vite": "^0.6.3",
         "@types/node": "^22.19.1",
-        "sigx": "^0.4.9",
+        "sigx": "^0.6.3",
         "typescript": "^5.9.3",
-        "vite": "^8.0.3"
+        "vite": "^8.0.16"
     },
     "publishConfig": {
         "access": "public"
